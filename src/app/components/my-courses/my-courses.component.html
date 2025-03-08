@@ -1,0 +1,44 @@
+<div class="my-courses-container">
+  <h1 class="my-courses-title">הקורסים שלי</h1>
+
+  <mat-accordion class="courses-accordion">
+    @for (course of courses; track course.id) {
+      <mat-expansion-panel class="course-panel" (opened)="showCourseDetails(course.id)" (closed)="course.isDetailsOpen = false">
+        <mat-expansion-panel-header class="course-header">
+          <mat-panel-title class="course-title">
+            {{ course.title }}
+          </mat-panel-title>
+          <mat-panel-description class="course-description"> </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-card-content class="course-content">
+          @if (selectedCourse && selectedCourse.id === course.id) {
+            <div class="course-details">
+              <p class="course-description-text">{{ selectedCourse.description }}</p>
+
+              <h3 class="lessons-title">שיעורים</h3>
+              <mat-list class="lessons-list">
+                @for (lesson of lessons; track lesson.id) {
+                  <mat-list-item class="lesson-item">
+                    <div class="lesson-content-wrapper">
+                      <h4 class="lesson-title" matListItemTitle> {{ lesson.title }}</h4>
+                      <p class="lesson-content" matListItemLine>{{ lesson.content }}</p>
+                    </div>
+                  </mat-list-item>
+                } @empty {
+                  <p class="no-lessons">אין שיעורים בקורס זה.</p>
+                }
+              </mat-list>
+            </div>
+          }
+
+          <button mat-raised-button color="warn" class="leave-button" (click)="leaveCourse(course.id)">
+            עזוב קורס
+          </button>
+        </mat-card-content>
+      </mat-expansion-panel>
+    } @empty {
+      <p class="no-courses">אין קורסים זמינים כרגע.</p>
+    }
+  </mat-accordion>
+</div>

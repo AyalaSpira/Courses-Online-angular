@@ -1,0 +1,15 @@
+<nav class="navigation-toolbar">
+  <span class="app-title">Ayala Spira site</span>
+  <span class="spacer"></span>
+  <div *ngIf="authService.isAuthenticated()" class="nav-buttons">
+    <button *ngIf="authService.getRole() === 'admin' || authService.getRole() === 'teacher'" routerLink="/manage-courses" routerLinkActive="active" class="nav-button">ניהול קורסים</button>
+    <button routerLink="/my-courses" routerLinkActive="active" class="nav-button">הקורסים שלי</button>
+    <button routerLink="/courses" routerLinkActive="active" class="nav-button">קורסים</button>
+    <button routerLink="/home" routerLinkActive="active" class="nav-button">דף הבית</button>
+    <button (click)="authService.logout()" class="logout-button">התנתק</button>
+  </div>
+  <div *ngIf="!authService.isAuthenticated()" class="auth-buttons">
+    <button routerLink="/login" routerLinkActive="active" class="nav-button">התחבר</button>
+    <button routerLink="/register" routerLinkActive="active" class="register-button">הרשם</button>
+  </div>
+</nav>

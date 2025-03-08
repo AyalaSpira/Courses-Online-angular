@@ -1,0 +1,152 @@
+.my-courses-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background: #f5f5f5; 
+  padding: 40px 20px;
+}
+
+.my-courses-title {
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #00bcd4; 
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 4px rgba(0, 188, 212, 0.4);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.courses-accordion {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.course-panel {
+  background: #e0e0e0; 
+  margin-bottom: 15px;
+  border-radius: 10px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-panel:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.course-header {
+  background: #00bcd4;
+  color: black;
+  padding: 12px 18px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.course-title {
+  font-weight: bold;
+  font-size: 1.4em;
+  flex-grow: 1;
+}
+
+.course-description {
+  font-style: italic;
+  margin-left: 12px;
+  font-size: 1em;
+  color: #666;
+}
+
+.course-content {
+  padding: 18px;
+  background-color: #f7f7f7; 
+  border-radius: 8px;
+}
+
+.course-details {
+  margin-bottom: 18px;
+}
+
+.course-description-text {
+  white-space: pre-line;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.lessons-title {
+  color: #00bcd4; 
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.lessons-list {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.lesson-item {
+  background: #e0e0e0;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.lesson-item:hover {
+  background: #bdbdbd; 
+}
+
+.lesson-title {
+  font-weight: bold;
+}
+
+.lesson-content {
+  margin-top: 5px;
+}
+
+.join-button, .leave-button {
+  background: #00bcd4; 
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.join-button:hover, .leave-button:hover {
+  background: #0097a7; 
+}
+
+.no-lessons, .no-courses {
+  text-align: center;
+  color: #888;
+  padding: 30px;
+  font-size: 1.2em;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.lesson-content .lesson-title .lesson-content-wrapper{
+  height: 5px;
+}
+ 

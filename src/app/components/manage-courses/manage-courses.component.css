@@ -1,0 +1,209 @@
+.manage-courses-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: #f5f5f5; 
+  font-family: 'Arial', sans-serif;
+}
+
+.manage-courses-container h1 {
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #00bcd4; 
+  text-align: center;
+}
+
+.actions-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.add-course-card {
+  width: 100%;
+  max-width: 600px;
+  margin: 15px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; 
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.courses-accordion {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.course-panel {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #ffffff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-panel:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.course-header {
+  background-color: #00bcd4;
+  color: white;
+  padding: 18px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.course-title {
+  font-weight: bold;
+  font-size: 1.3em;
+  flex-grow: 1;
+}
+
+.course-description {
+  font-style: italic;
+  margin-left: 15px;
+  font-size: 1em;
+  color: #333;
+}
+
+.course-content {
+  padding: 20px;
+  background-color: #f9f9f9; 
+  border-radius: 8px;
+}
+
+.course-description-text {
+  white-space: pre-line;
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+.course-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.course-actions button {
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  background-color: #00bcd4; 
+  color: white;
+  border: none;
+}
+
+.course-actions button:hover {
+  background-color: #0097a7; 
+}
+
+.lessons-accordion {
+  margin-top: 20px;
+}
+
+.lesson-panel {
+  margin-bottom: 15px;
+}
+
+.lesson-header {
+  background-color: #f0f0f0;
+}
+
+.lesson-title {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.lesson-content {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.lesson-text {
+  margin-bottom: 15px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.lesson-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lesson-actions button {
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  background-color: #00bcd4; 
+  color: white;
+  border: none;
+}
+
+.lesson-actions button:hover {
+  background-color: #0097a7;
+}
+
+.no-lessons, .no-courses {
+  text-align: center;
+  color: #888;
+  padding: 40px;
+  font-size: 1.2em;
+}
+
+.error-message {
+  color: red;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.add-lesson-button, .toggle-lessons-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1.1em;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.add-lesson-button:hover, .toggle-lessons-button:hover {
+  background-color: #0097a7; 
+}
+
+.course-actions button.primary {
+  background-color: #0097a7; 
+}
+
+.course-actions button.warn {
+  background-color: #f44336; 
+}
+
+.lesson-actions button.primary {
+  background-color: #0097a7; 
+}
+
+.lesson-actions button.warn {
+  background-color: #f44336; 
+}
